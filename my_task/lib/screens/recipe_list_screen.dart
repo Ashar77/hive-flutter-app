@@ -24,7 +24,6 @@ class _RecipeListState extends State<RecipeList> {
     // have to import that box!!
 
     return Scaffold(
-      backgroundColor: Colors.lightBlue,
       appBar: AppBar(title: Text('List of Recipes')),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -52,13 +51,22 @@ class _RecipeListState extends State<RecipeList> {
                           margin: EdgeInsets.all(18),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(12),
-                            color: Colors.white,
+                            color: Color.fromARGB(255, 208, 170, 214),
                           ),
                           child: Column(
                             children: [
                               ListTile(
-                                title: Text(recipe!.title!),
-                                subtitle: Text(recipe.description!),
+                                title: Text(
+                                  recipe!.title!,
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 24),
+                                ),
+                                subtitle: Text(
+                                  recipe.description!,
+                                  style: TextStyle(
+                                      fontSize: 16, color: Colors.black),
+                                ),
                                 leading: CircleAvatar(
                                   radius: 28,
                                   backgroundImage:

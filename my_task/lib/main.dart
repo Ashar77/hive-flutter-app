@@ -26,6 +26,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        primaryColor: Colors.purple,
+        primarySwatch: Colors.deepPurple,
+      ),
       home: Home(),
       routes: {
         AddRecipeScreen.routeName: (ctx) => AddRecipeScreen(),

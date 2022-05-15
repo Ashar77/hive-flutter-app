@@ -79,10 +79,12 @@ class _AddRecipeWidgetState extends State<AddRecipeWidget> {
               controller: titleController,
               textAlign: TextAlign.start,
               style: TextStyle(fontSize: 24),
-              decoration: InputDecoration(border: OutlineInputBorder()),
+              decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  contentPadding: EdgeInsets.all(8)),
             ),
             SizedBox(
-              height: 100,
+              height: 70,
             ),
             Text(
               'Description',
@@ -121,9 +123,9 @@ class _AddRecipeWidgetState extends State<AddRecipeWidget> {
               child: TextButton(
                 style: ButtonStyle(
                   foregroundColor:
-                      MaterialStateProperty.all<Color>(Colors.blue),
+                      MaterialStateProperty.all<Color>(Colors.white),
                   backgroundColor:
-                      MaterialStateProperty.all<Color>(Colors.yellow),
+                      MaterialStateProperty.all<Color>(Colors.blue),
                 ),
                 onPressed: () {
                   final String myTitle = titleController.text;
@@ -144,7 +146,7 @@ class _AddRecipeWidgetState extends State<AddRecipeWidget> {
                                 lisRecipe: recipeBox,
                               )));
                 },
-                child: Text('TextButton'),
+                child: Text('Save Recipe'),
               ),
             ),
           ],
